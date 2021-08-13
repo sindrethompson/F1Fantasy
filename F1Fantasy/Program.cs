@@ -14,8 +14,6 @@ namespace F1Fantasy
                 var driver = db.Driver.Where(driver => driver.Name.Contains("Lewis")).First().Position = 2;
                 db.SaveChanges();
 
-
-
                 Console.ReadLine();
             }
         }

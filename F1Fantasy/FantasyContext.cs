@@ -14,7 +14,7 @@ namespace F1Fantasy
 
         public FantasyContext()
         {
-            DbPath = @"C:\Temp\SqlLITE\fantasyFormulaone.db";
+            DbPath = @"C:\Users\Sindre Thompson\source\repos\F1Fantasy\fantasyFormulaone.db";
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
