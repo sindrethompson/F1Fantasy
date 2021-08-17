@@ -1,5 +1,4 @@
 ﻿using F1Fantasy.FantasyData;
-using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 
@@ -11,8 +10,19 @@ namespace F1Fantasy
         {
             using(var db = new FantasyContext())
             {
-                var driver = db.Driver.Where(driver => driver.Name.Contains("Lewis")).First().Position = 2;
-                db.SaveChanges();
+
+                var team = db.Teams.Where(x => x.Name == "Mercedes").First().Drivers;
+
+                Race race = new Race
+                {
+                    No = 2,
+                    Name = "Silverstone Grand Prix",
+                    Location = "Silverstone",
+                    Country = "Great Britain",
+                    Length = 5
+                };
+                //db.Add(race);
+                //db.SaveChanges();
 
                 Console.ReadLine();
             }
