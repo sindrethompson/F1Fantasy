@@ -16,6 +16,7 @@ namespace F1Fantasy.FantasyData
         public List<Driver> Drivers = new List<Driver>();
     }
 
+
     public class Driver
     {
         [Key]
@@ -26,5 +27,19 @@ namespace F1Fantasy.FantasyData
         public string TeamName { get; set; }
 
         public Team Team { get; set; }
+    }
+
+
+    public class Race
+    {
+        [Key]
+        public int No { get; set; }
+        public string Name { get; set; }
+
+        public string Location { get; set; }
+
+        public string Country { get; set; }
+
+        public int Length { get; set; }
     }
 }
